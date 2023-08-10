@@ -7,21 +7,21 @@ const Footer = () => {
 
   return (
     <Box
-      position={"sticky"}
+      position={"fixed"}
       bottom={"0px"}
       w="100vw"
       bgColor={colorMode === "dark" ? "#1A202C" : "white"}
       px={4}
-      className="footer"
+      className="footer-container"
       boxShadow={"inner"}
     >
       <Center
+        className="footer-contents"
         justifyContent={"space-between"}
         alignItems={"flex-end"}
         maxW={"1280px"}
         margin={"auto"}
       >
-        <div>
           <Flex
             alignItems={"flex-end"}
             paddingBottom={2.5}
@@ -31,9 +31,7 @@ const Footer = () => {
           >
             &copy; {new Date().getFullYear()}
           </Flex>
-        </div>
         {/* <Spacer /> */}
-        <div>
           <Flex justifyContent={"space-around"} className="BAZ">
             <SvgIconLink title="Github" url="https://github.com/the-amber-joy">
               <title>Github</title>
@@ -65,7 +63,6 @@ const Footer = () => {
               <polyline points="10 9 9 9 8 9"></polyline>
             </SvgIconLink>
           </Flex>
-        </div>
       </Center>
     </Box>
   );

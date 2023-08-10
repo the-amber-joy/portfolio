@@ -16,8 +16,8 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => (
   <>
-    <Container maxWidth="1280px">
-      <Flex minHeight="92vh" paddingTop={4} direction={"column"}>
+    <Container maxWidth="1280px" height="90vh">
+      <Flex paddingTop={4} direction={"column"}>
         <ColorModeSwitcher marginBottom={6} />
 
         <Tabs variant={"enclosed"}>

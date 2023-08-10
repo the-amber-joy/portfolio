@@ -3,15 +3,15 @@
 }
 
 .borderDark:hover {
-  border-color: var(--chakra-colors-brand-ajPink);
+  border-color: var(--chakra-colors-brand-ajPurple);
   transition: border-color .2s ease-in;
 }
 
 .borderLight {
-  border-color: var(--chakra-colors-brand-ajPurple);
+  border-color: var(--chakra-colors-brand-ajMagenta);
 }
 
 .borderLight:hover {
-  border-color: var(--chakra-colors-brand-ajMagenta);
+  border-color: var(--chakra-colors-brand-ajPurple);
   transition: border-color .2s ease-in;
 }

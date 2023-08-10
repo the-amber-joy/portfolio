@@ -14,16 +14,16 @@ const SvgIconLink = (props: any) => {
       style={{ padding: "10px" }}
     >
       <Center>
-        <i>
+        <i className={styles.icon}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
             viewBox="0 0 24 24"
             fill="none"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            preserveAspectRatio="none"
+            className={styles.iconSvg}
           >
             {props.children}
           </svg>
