@@ -22,9 +22,9 @@ const About = () => {
           Hi, I'm Amber!
         </Heading>
         <Text color={"black"} maxW={"md"}>
-          I'm a Front-End Web Developer specializing in
-          modern JS/TS frameworks for {duration()}+ years. Please contact me
-          using the links below!
+          I'm a Front-End Web Developer with {duration()}+ years of experience
+          specializing in modern JS/TS frameworks. Please contact me using the
+          links below!
         </Text>
       </Stack>
     </Center>
