@@ -1,14 +1,14 @@
 import {
   Container,
   Flex,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
+  // Tab,
+  // TabList,
+  // TabPanel,
+  // TabPanels,
+  // Tabs,
 } from "@chakra-ui/react";
 import "./App.css";
-import PortfolioList from "./components/Portfolio/PortfolioList";
+// import PortfolioList from "./components/Portfolio/PortfolioList";
 
 import About from "./components/About/About";
 import { ColorModeSwitcher } from "./components/ColorModeSwitcher";
