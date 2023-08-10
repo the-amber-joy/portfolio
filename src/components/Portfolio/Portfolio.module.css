@@ -1,0 +1,17 @@
+.borderDark {
+  border-color: var(--chakra-colors-brand-ajCheez);
+}
+
+.borderDark:hover {
+  border-color: var(--chakra-colors-brand-ajPink);
+  transition: border-color .2s ease-in;
+}
+
+.borderLight {
+  border-color: var(--chakra-colors-brand-ajPurple);
+}
+
+.borderLight:hover {
+  border-color: var(--chakra-colors-brand-ajMagenta);
+  transition: border-color .2s ease-in;
+}
