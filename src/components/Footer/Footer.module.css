@@ -1,0 +1,38 @@
+.footer {
+  z-index: 999 !important;
+}
+.iconLinkDark {
+  stroke: var(--chakra-colors-brand-ajCheez);
+  color: var(--chakra-colors-brand-ajCheez);
+}
+
+.iconLinkDark:hover {
+  stroke: var(--chakra-colors-brand-ajPink);
+  color: var(--chakra-colors-brand-ajPink);
+
+  transition: color .2s ease-in, stroke .2s ease-in;
+}
+
+.iconLinkLight {
+  stroke: var(--chakra-colors-brand-ajPurple);
+  color: var(--chakra-colors-brand-ajPurple);
+}
+
+.iconLinkLight:hover {
+  stroke: var(--chakra-colors-brand-ajMagenta);
+  color: var(--chakra-colors-brand-ajMagenta);
+
+  transition: color .2s ease-in, stroke .2s ease-in;
+}
+
+.icon {
+  height: auto;
+  width: auto;
+  max-height: 24px;
+  max-width: 24px;
+}
+
+.iconSvg {
+  width: 100%;
+  height: 100%
+}
