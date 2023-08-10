@@ -1,49 +1,49 @@
 import { map } from "lodash";
-import PortolioItem from "./PortfolioItem";
+import PortolioItem, { PortfolioItemType } from "./PortfolioItem";
 import { Wrap, WrapItem } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
 
 const PortfolioList = () => {
-  const image = ({ src, alt, url }: { src: string; alt: string, url: string }) => (
-    <Image src={src} alt={alt} data-url={url} />
+  const image = ({ src, title, description, url }: PortfolioItemType) => (
+    <Image
+      src={src}
+      title={title}
+      data-url={url}
+      data-description={description}
+    />
   );
 
-  const portfolioItems: any[] = [
+  const portfolioItems = [
     image({
       src: "/src/assets/critters.png",
-      alt: "Let's look at some critters!",
+      title: "Let's look at some critters! ",
+      description: "Just for fun",
       url: "https://critters.amberjoy.dev",
     }),
     image({
-      src: "/src/assets/critters.png",
-      alt: "Let's look at some critters!",
-      url: "https://critters.amberjoy.dev",
+      src: "/src/assets/how2fite.png",
+      title: "How 2 Fite",
+      description: "A PWA designed 100% by my children",
+      url: "https://how2fite.amberjoy.dev/",
     }),
-    image({
-      src: "/src/assets/critters.png",
-      alt: "Let's look at some critters!",
-      url: "https://critters.amberjoy.dev",
-    }),
-    image({
-      src: "/src/assets/critters.png",
-      alt: "Let's look at some critters!",
-      url: "https://critters.amberjoy.dev",
-    }),
-    image({
-      src: "/src/assets/critters.png",
-      alt: "Let's look at some critters!",
-      url: "https://critters.amberjoy.dev",
-    }),
-    image({
-      src: "/src/assets/critters.png",
-      alt: "Let's look at some critters!",
-      url: "https://critters.amberjoy.dev",
-    }),
+    // image({
+    //   src: "/src/assets/catsgpt.png",
+    //   title: "CatsGPT",
+    //   description: "",
+    //   url: "https://catsGPT.amberjoy.dev",
+    // }),
+    // image({
+    //   src: "/src/assets/shakeme.png",
+    //   title: "SHAKE ME",
+    //   description: "",
+    //   url: "https://shake.amberjoy.dev",
+    // })
+    // }),
   ];
 
   return (
     <Wrap spacing={4}>
-      {map(portfolioItems, (item: string, i: number) => (
+      {map(portfolioItems, (item: PortfolioItemType, i: number) => (
         <WrapItem key={i}>
           <PortolioItem item={item} key={i} />
         </WrapItem>
