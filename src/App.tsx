@@ -19,8 +19,9 @@ const App = () => (
     <Container maxWidth="1280px" height="90vh">
       <Flex paddingTop={4} direction={"column"}>
         <ColorModeSwitcher marginBottom={6} />
+        <About />
 
-        <Tabs variant={"enclosed"}>
+        {/* <Tabs variant={"enclosed"}>
           <TabList>
             <Tab key={1}>About</Tab>
             <Tab key={2}>Portfolio</Tab>
@@ -34,7 +35,7 @@ const App = () => (
               <PortfolioList />
             </TabPanel>
           </TabPanels>
-        </Tabs>
+        </Tabs> */}
       </Flex>
     </Container>
     <Footer />
