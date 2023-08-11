@@ -20,7 +20,7 @@ const portfolioItems: PortfolioItemType[] = [
     pic: crittersPng,
     title: "Let's look at some critters! ",
     description:
-      "Just for fun, using the free PokeAPI. Search for Pokemon, or see random ones. Save your favorites!",
+      `Just for fun, using the free PokeAPI. Search for Pokemon, or see random ones! Toggle between default and shiny variants! Save your favorites!`,
     href: "https://critters.amberjoy.dev",
     repo: "https://github.com/the-amber-joy/lookit-these-critters",
   },
@@ -28,7 +28,7 @@ const portfolioItems: PortfolioItemType[] = [
     pic: how2fitePng,
     title: "How 2 Fite",
     description:
-      "Designed 100% by my children, spelling and all. They wrote it on a whiteboard. I also used this as an opportunity to play with the browser voice synthesizer API!",
+      "Designed 100% by my children, spelling and all. They think it's hilarious. I also used this as an opportunity to play with the browser voice synthesizer API.",
     href: "https://how2fite.amberjoy.dev/",
     repo: "https://github.com/the-amber-joy/how2fite",
   },
@@ -36,7 +36,7 @@ const portfolioItems: PortfolioItemType[] = [
     pic: catsGPTPng,
     title: "CatsGPT",
     description:
-      "I asked ChatGPT to make a tiny ExpressJS app, and then style it. This is the result. Design is hard for LLMs. (Hosted on Glitch, so it may be a little slow to load!)",
+      "I asked ChatGPT to make a tiny ExpressJS app, and then style it. This is the result. Design is hard for LLMs. (Hosted on Glitch, so it may be a little slow to load.)",
     href: "https://catsGPT.amberjoy.dev",
     repo: "https://github.com/the-amber-joy/catsGPT",
   },
