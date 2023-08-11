@@ -1,17 +1,21 @@
-.borderDark {
+.portfolioItemDark {
   border-color: var(--chakra-colors-brand-ajCheez);
+  color: var(--chakra-colors-brand-ajCheez);
 }
 
-.borderDark:hover {
+.portfolioItemDark:hover {
   border-color: var(--chakra-colors-brand-ajPink);
-  transition: border-color 0.2s ease-in;
+  color: var(--chakra-colors-brand-ajPink);
+  transition: border-color 0.2s ease-in, color 0.2s ease-in;
 }
 
-.borderLight {
+.portfolioItemLight {
   border-color: var(--chakra-colors-brand-ajPurple);
+  color: var(--chakra-colors-brand-ajPurple);
 }
 
-.borderLight:hover {
+.portfolioItemLight:hover {
   border-color: var(--chakra-colors-brand-ajMagenta);
-  transition: border-color 0.2s ease-in;
+  color: var(--chakra-colors-brand-ajMagentaLvls-400);
+  transition: border-color 0.2s ease-in, color 0.2s ease-in;
 }

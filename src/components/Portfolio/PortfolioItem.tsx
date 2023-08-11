@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
   Center,
   Image,
@@ -9,9 +10,8 @@ import {
   useTheme,
 } from "@chakra-ui/react";
 
-import { PortfolioItemType } from "./PortfolioList";
 import styles from "./Portfolio.module.css";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { PortfolioItemType } from "./PortfolioList";
 
 const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
   const { colorMode } = useColorMode();
@@ -19,7 +19,11 @@ const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
 
   return (
     <LinkBox
-      className={colorMode === "dark" ? styles.borderDark : styles.borderLight}
+      className={
+        colorMode === "dark"
+          ? styles.portfolioItemDark
+          : styles.portfolioItemLight
+      }
       borderWidth="1.5px"
       overflow="hidden"
       borderRadius="1rem"
@@ -28,7 +32,15 @@ const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
         <Image src={item.pic} alt={item.title} />
       </LinkOverlay>
       <Center flexDirection={"column"} p={2}>
-        <Text as="b" color={colors.brand.ajPinkLvls["600"]}>
+        <Text
+          as="b"
+          color={colors.brand.ajPinkLvls["600"]}
+          className={
+            colorMode === "dark"
+              ? styles.portfolioItemDark
+              : styles.portfolioItemLight
+          }
+        >
           {item.title}
         </Text>
         <Text>{item.description}</Text>
