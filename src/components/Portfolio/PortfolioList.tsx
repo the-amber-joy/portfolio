@@ -1,4 +1,4 @@
-import { Heading, Wrap } from "@chakra-ui/react";
+import { Heading, SimpleGrid } from "@chakra-ui/react";
 import { map } from "lodash";
 
 import PortfolioItem from "./PortfolioItem";
@@ -54,13 +54,18 @@ const PortfolioList = () => {
   return (
     <>
       <Heading size={"sm"} my={4}>
-        A few silly examples of how I spend some of my spare time:
+        Here are some of the dumb little things I've made in my spare time:
       </Heading>
-      <Wrap spacing={4} marginBottom={"76px"}>
+      <SimpleGrid
+        minChildWidth="sm"
+        spacing={4}
+        columns={3}
+        marginBottom={"75px"}
+      >
         {map(portfolioItems, (item, i) => (
           <PortfolioItem item={item} key={i} />
         ))}
-      </Wrap>
+      </SimpleGrid>
     </>
   );
 };

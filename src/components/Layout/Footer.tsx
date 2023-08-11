@@ -22,6 +22,7 @@ const Footer = () => {
         [styles.footerDark]: colorMode === "dark",
         [styles.footerLight]: colorMode === "light",
       })}
+      borderRadius={0}
     >
       <Center
         className="footer-contents"

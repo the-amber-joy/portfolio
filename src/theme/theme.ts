@@ -63,7 +63,13 @@ const theme = extendTheme({
       }),
     },
   },
-
+  styles: {
+    global: {
+      "*": {
+        borderRadius: "1rem",
+      },
+    },
+  },
   // global: (props: StyleFunctionProps) => ({
   //   body: {
   //     color: mode(
