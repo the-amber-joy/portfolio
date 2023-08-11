@@ -32,6 +32,12 @@ const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
           {item.title}
         </Text>
         <Text>{item.description}</Text>
+        {item.extraLink && item.extraText && (
+          <Link href={item.extraLink} marginTop={4} isExternal>
+            {item.extraText}
+            <ExternalLinkIcon marginX="2px" marginBottom={1} />
+          </Link>
+        )}
         <Link href={item.repo} marginTop={4} isExternal>
           Repo for this project
           <ExternalLinkIcon marginX="2px" marginBottom={1} />

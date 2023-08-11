@@ -13,16 +13,19 @@ export interface PortfolioItemType {
   description: string;
   href: string;
   repo: string;
+  extraText?: string;
+  extraLink?: string;
 }
 
 const portfolioItems: PortfolioItemType[] = [
   {
     pic: crittersPng,
     title: "Let's look at some critters! ",
-    description:
-      `Just for fun, using the free PokeAPI. Search for Pokemon, or see random ones! Toggle between default and shiny variants! Save your favorites!`,
+    description: `Just for fun, using the free PokeAPI. Search for Pokemon, or see random ones! Toggle between default and shiny variants! Save your favorites!`,
     href: "https://critters.amberjoy.dev",
     repo: "https://github.com/the-amber-joy/lookit-these-critters",
+    extraLink: "https://pokeapi.co/",
+    extraText: "PokeAPI.co",
   },
   {
     pic: how2fitePng,
@@ -39,6 +42,8 @@ const portfolioItems: PortfolioItemType[] = [
       "I asked ChatGPT to make a tiny ExpressJS app, and then style it. This is the result. Design is hard for LLMs. (Hosted on Glitch, so it may be a little slow to load.)",
     href: "https://catsGPT.amberjoy.dev",
     repo: "https://github.com/the-amber-joy/catsGPT",
+    extraLink: "https://sharegpt.com/c/wHYqysu",
+    extraText: "My original convo w/ ChatGPT"
   },
   {
     pic: shakeMePng,
