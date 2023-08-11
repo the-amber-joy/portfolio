@@ -8,10 +8,10 @@
 }
 
 .borderLight {
-  border-color: var(--chakra-colors-brand-ajMagenta);
+  border-color: var(--chakra-colors-brand-ajPurple);
 }
 
 .borderLight:hover {
-  border-color: var(--chakra-colors-brand-ajPurple);
+  border-color: var(--chakra-colors-brand-ajMagenta);
   transition: border-color 0.2s ease-in;
 }
