@@ -16,7 +16,7 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => (
   <>
-    <Container maxWidth="1280px" height="90vh">
+    <Container maxWidth="1280px">
       <Flex paddingTop={4} direction={"column"}>
         <ColorModeSwitcher marginBottom={6} />
         <Tabs variant={"enclosed"}>
@@ -25,7 +25,7 @@ const App = () => (
             <Tab key={2}>Portfolio</Tab>
           </TabList>
 
-          <TabPanels>
+          <TabPanels marginBottom={"68px"}>
             <TabPanel>
               <About />
             </TabPanel>
