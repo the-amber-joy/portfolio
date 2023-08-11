@@ -22,6 +22,7 @@ const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
       className={colorMode === "dark" ? styles.borderDark : styles.borderLight}
       borderWidth="1.5px"
       overflow="hidden"
+      borderRadius="1rem"
     >
       <LinkOverlay href={item.href}>
         <Image src={item.pic} alt={item.title} />

@@ -33,7 +33,7 @@ const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
-        borderRadius: "4px",
+        borderRadius: ".25rem",
         _focus: {
           // Hex codes for transparency https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
           // 99 == 60%
@@ -44,7 +44,7 @@ const theme = extendTheme({
     Link: {
       baseStyle: (props: StyleFunctionProps) => ({
         color: mode(brand.ajPurple, brand.ajCheez)(props),
-        borderRadius: "4px",
+        borderRadius: ".25rem",
         _focus: {
           boxShadow: `0 0 0 3px ${brand.ajPurple}99`,
         },
@@ -63,21 +63,6 @@ const theme = extendTheme({
       }),
     },
   },
-  styles: {
-    global: {
-      "*": {
-        borderRadius: "1rem",
-      },
-    },
-  },
-  // global: (props: StyleFunctionProps) => ({
-  //   body: {
-  //     color: mode(
-  //       theme.colors.primaryFontColor.lightMode,
-  //       theme.colors.primaryFontColor.darkMode
-  //     )(props),
-  //   },
-  // }),
 });
 
 export default theme;

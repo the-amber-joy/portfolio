@@ -24,6 +24,7 @@ const About = () => {
         marginTop={4}
         textAlign="center"
         className={styles.gradient}
+        borderRadius="1rem"
       >
         <Stack>
           <Heading
