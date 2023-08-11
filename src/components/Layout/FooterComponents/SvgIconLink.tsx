@@ -15,6 +15,7 @@ const SvgIconLink = (props: any) => {
       }
       style={{ padding: "5px 5px 0 5px" }}
       fontSize={"sm"}
+      rel={props.rel}
     >
       <Center>
         <i
