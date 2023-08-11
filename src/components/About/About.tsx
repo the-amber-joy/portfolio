@@ -51,7 +51,7 @@ const About = () => {
           >
             I'm a Front-End Web Developer with {duration()}+ years of experience
             specializing in modern JS/TS frameworks. Please contact me using the
-            links below!
+            links in the footer!
           </Text>
         </Stack>
       </Center>
