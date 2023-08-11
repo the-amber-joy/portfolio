@@ -8,7 +8,7 @@
     var(--chakra-colors-brand-ajOrangeLvls-600),
     var(--chakra-colors-brand-ajCheezLvls-600),
     /* var(--chakra-colors-brand-ajYellowLvls-600)  , */
-    var(--chakra-colors-brand-ajLtGreenLvls-600),
+      var(--chakra-colors-brand-ajLtGreenLvls-600),
     var(--chakra-colors-brand-ajDkGreenLvls-600)
   );
   background-size: 200% 200%;

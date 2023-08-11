@@ -1,18 +1,23 @@
-import { Center, useColorMode, Text, Box, Link } from "@chakra-ui/react";
+import {
+  Center,
+  Image,
+  Link,
+  LinkBox,
+  LinkOverlay,
+  Text,
+  useColorMode,
+  WrapItem,
+} from "@chakra-ui/react";
 
+import { PortfolioItemType } from "./PortfolioList";
 import styles from "./Portfolio.module.css";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-export interface PortfolioItemType {
-  src: string;
-  title: string;
-  description: string;
-  url: string;
-}
-const PortolioItem = ({ item }: { item: any }) => {
+const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
   const { colorMode } = useColorMode();
   return (
-    <Link href={item.props["data-url"]}>
-      <Box
+    <WrapItem>
+      <LinkBox
         className={
           colorMode === "dark" ? styles.borderDark : styles.borderLight
         }
@@ -20,13 +25,22 @@ const PortolioItem = ({ item }: { item: any }) => {
         maxW={"sm"}
         w={"auto"}
       >
-        {item}
-        <Center flexDirection={"column"}>
-          <Text as="b">{item.props.title}</Text>
-          <Text as="em">{item.props["data-description"]}</Text>
+        <LinkOverlay href={item.href} isExternal>
+          <Image src={item.pic} alt={item.title} />
+        </LinkOverlay>
+        <Center flexDirection={"column"} p={2}>
+          <Text as="b">
+            {item.title}
+            <ExternalLinkIcon marginX="2px" marginBottom={1} />
+          </Text>
+          <Text>{item.description}</Text>
+          <Link href={item.repo} marginTop={4} isExternal>
+            Repo for this project
+            <ExternalLinkIcon marginX="2px" marginBottom={1} />
+          </Link>
         </Center>
-      </Box>
-    </Link>
+      </LinkBox>
+    </WrapItem>
   );
 };
 

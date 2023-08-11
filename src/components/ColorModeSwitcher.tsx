@@ -1,11 +1,11 @@
 import {
-  useColorMode,
-  useColorModeValue,
+  Flex,
+  Heading,
   IconButton,
   IconButtonProps,
-  Flex,
   Spacer,
-  Heading,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 

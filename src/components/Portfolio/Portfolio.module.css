@@ -4,7 +4,7 @@
 
 .borderDark:hover {
   border-color: var(--chakra-colors-brand-ajPurple);
-  transition: border-color .2s ease-in;
+  transition: border-color 0.2s ease-in;
 }
 
 .borderLight {
@@ -13,5 +13,5 @@
 
 .borderLight:hover {
   border-color: var(--chakra-colors-brand-ajPurple);
-  transition: border-color .2s ease-in;
+  transition: border-color 0.2s ease-in;
 }

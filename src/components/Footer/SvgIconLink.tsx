@@ -1,4 +1,5 @@
 import { Center, useColorMode } from "@chakra-ui/react";
+
 import styles from "./Footer.module.css";
 
 const SvgIconLink = (props: any) => {

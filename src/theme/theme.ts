@@ -1,8 +1,11 @@
 import {
+  // theme as baseTheme,
   extendTheme,
   StyleFunctionProps,
   type ThemeConfig,
 } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
+
 import brand from "./brandColors";
 
 const config: ThemeConfig = {
@@ -12,7 +15,34 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
   config,
-  colors: { brand },
+  fonts: {
+    heading: `Comfortaa, sans-serif`,
+    body: `Comfortaa, sans-serif`,
+  },
+  // layerStyles: {
+  // base: {
+  // bg: "gray.50",
+  // border: "2px solid",
+  // borderColor: "gray.500",
+  // color: brand.ajPurpleLvls["200"],
+  // },
+  // selected: {
+  //   bg: "teal.500",
+  //   color: "teal.700",
+  //   borderColor: "orange.500",
+  // },
+  // },
+  colors: {
+    brand,
+    // primaryFontColor: {
+    //   lightMode: brand.ajBlueLvls["200"],
+    //   darkMode: brand.ajPurpleLvls["200"],
+    // },
+    // secondaryFontColor: {
+    //   lightMode: baseTheme.colors.gray["600"],
+    //   darkMode: baseTheme.colors.gray["400"],
+    // },
+  },
   components: {
     Button: {
       baseStyle: {
@@ -27,7 +57,7 @@ const theme = extendTheme({
       baseStyle: (props: StyleFunctionProps) => ({
         tab: {
           _selected: {
-            color: props.colorMode === "dark" ? brand.ajCheez : brand.ajPurple,
+            color: mode(brand.ajPurple, brand.ajCheez)(props),
           },
           _focus: {
             boxShadow: `0 0 0 3px ${brand.ajPurple}99`,
@@ -36,6 +66,15 @@ const theme = extendTheme({
       }),
     },
   },
+
+  // global: (props: StyleFunctionProps) => ({
+  //   body: {
+  //     color: mode(
+  //       theme.colors.primaryFontColor.lightMode,
+  //       theme.colors.primaryFontColor.darkMode
+  //     )(props),
+  //   },
+  // }),
 });
 
 export default theme;

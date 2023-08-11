@@ -1,4 +1,5 @@
 import { Box, Center, Flex, useColorMode, useTheme } from "@chakra-ui/react";
+
 import SvgIconLink from "./SvgIconLink";
 import styles from "./Footer.module.css";
 
@@ -13,7 +14,7 @@ const Footer = () => {
       w="100vw"
       bgColor={colorMode === "dark" ? "#1A202C" : "white"}
       px={4}
-      className="footer-container"
+      className={styles.footerContainer}
       boxShadow={"inner"}
     >
       <Center

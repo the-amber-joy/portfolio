@@ -1,8 +1,17 @@
-import { useTheme, Heading, Text, Stack } from "@chakra-ui/react";
-import { Center } from "@chakra-ui/layout";
+import {
+  Center,
+  Heading,
+  Stack,
+  Text,
+  useColorMode,
+  useTheme,
+} from "@chakra-ui/react";
+
 import styles from "./About.module.css";
 
 const About = () => {
+  const { colorMode } = useColorMode();
+
   const { colors } = useTheme();
   const duration = () => {
     const thisYear = new Date().getFullYear();
@@ -12,16 +21,32 @@ const About = () => {
     <Center
       w="auto"
       h="sm"
-      color={colors.white}
       marginTop={4}
       textAlign={"center"}
       className={styles.gradient}
     >
       <Stack>
-        <Heading textShadow={"2px 2px #000"} size={"lg"}>
-          Hi, I'm Amber!
+        <Heading
+          color={colors.white}
+          textShadow={
+            colorMode === "dark"
+              ? `2px 2px ${colors.brand.ajPurpleLvls["100"]}`
+              : `2px 2px ${colors.brand.ajBlueLvls["200"]}`
+          }
+          size={"lg"}
+        >
+          Welcome!
         </Heading>
-        <Text color={"black"} maxW={"md"}>
+        <Text
+          maxW={"md"}
+          color={
+            colorMode === "dark"
+              ? colors.brand.ajPurpleLvls["200"]
+              : colors.brand.ajBlueLvls["200"]
+          }
+          padding={2}
+          fontSize="xl"
+        >
           I'm a Front-End Web Developer with {duration()}+ years of experience
           specializing in modern JS/TS frameworks. Please contact me using the
           links below!

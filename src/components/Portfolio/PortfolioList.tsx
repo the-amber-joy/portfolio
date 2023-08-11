@@ -1,54 +1,67 @@
+import { Heading, Wrap } from "@chakra-ui/react";
 import { map } from "lodash";
-import PortolioItem, { PortfolioItemType } from "./PortfolioItem";
-import { Wrap, WrapItem } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
+
+import PortfolioItem from "./PortfolioItem";
+import crittersPng from "./img/critters.png";
+import how2fitePng from "./img/how2fite.png";
+import catsGPTPng from "./img/catsGPT.png";
+import shakeMePng from "./img/shakeMe.png";
+
+export interface PortfolioItemType {
+  pic: string;
+  title: string;
+  description: string;
+  href: string;
+  repo: string;
+}
+
+const portfolioItems: PortfolioItemType[] = [
+  {
+    pic: crittersPng,
+    title: "Let's look at some critters! ",
+    description:
+      "Just for fun, using the free PokeAPI. Search for Pokemon, or see random ones. Save your favorites!",
+    href: "https://critters.amberjoy.dev",
+    repo: "https://github.com/the-amber-joy/lookit-these-critters",
+  },
+  {
+    pic: how2fitePng,
+    title: "How 2 Fite",
+    description:
+      "Designed 100% by my children, spelling and all. They wrote it on a whiteboard.",
+    href: "https://how2fite.amberjoy.dev/",
+    repo: "https://github.com/the-amber-joy/how2fite",
+  },
+  {
+    pic: catsGPTPng,
+    title: "CatsGPT",
+    description:
+      "I asked ChatGPT to make a tiny ExpressJS app, and then style it. This is the result. Design is hard for LLMs. (Hosted on Glitch, so it may be a little slow to load!)",
+    href: "https://catsGPT.amberjoy.dev",
+    repo: "https://github.com/the-amber-joy/catsGPT",
+  },
+  {
+    pic: shakeMePng,
+    title: "SHAKE ME",
+    description:
+      "I wanted to experiment with accessing device motion sensors. Android only (for now), but it also works on click or tap. Generates random background and text colors.",
+    href: "https://shake.amberjoy.dev",
+    repo: "https://github.com/the-amber-joy/shake-me",
+  },
+];
 
 const PortfolioList = () => {
-  const image = ({ src, title, description, url }: PortfolioItemType) => (
-    <Image
-      src={src}
-      title={title}
-      data-url={url}
-      data-description={description}
-    />
-  );
-
-  const portfolioItems = [
-    image({
-      src: "/src/assets/critters.png",
-      title: "Let's look at some critters! ",
-      description: "Just for fun",
-      url: "https://critters.amberjoy.dev",
-    }),
-    image({
-      src: "/src/assets/how2fite.png",
-      title: "How 2 Fite",
-      description: "A PWA designed 100% by my children",
-      url: "https://how2fite.amberjoy.dev/",
-    }),
-    // image({
-    //   src: "/src/assets/catsgpt.png",
-    //   title: "CatsGPT",
-    //   description: "",
-    //   url: "https://catsGPT.amberjoy.dev",
-    // }),
-    // image({
-    //   src: "/src/assets/shakeme.png",
-    //   title: "SHAKE ME",
-    //   description: "",
-    //   url: "https://shake.amberjoy.dev",
-    // })
-    // }),
-  ];
-
   return (
-    <Wrap spacing={4}>
-      {map(portfolioItems, (item: PortfolioItemType, i: number) => (
-        <WrapItem key={i}>
-          <PortolioItem item={item} key={i} />
-        </WrapItem>
-      ))}
-    </Wrap>
+    <>
+      <Heading size={"sm"} mb={4}>
+        A few silly examples of how I spend some of my spare time:
+      </Heading>
+      <Wrap spacing={4}>
+        {map(portfolioItems, (item) => (
+          <PortfolioItem item={item} />
+        ))}
+      </Wrap>
+    </>
   );
 };
 
