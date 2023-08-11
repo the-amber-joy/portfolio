@@ -20,7 +20,7 @@ const About = () => {
   return (
     <Flex justifyContent="center">
       <Center
-        minW="md"
+        minW="xs"
         marginTop={4}
         textAlign="center"
         className={styles.gradient}
