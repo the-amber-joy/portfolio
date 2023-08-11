@@ -34,6 +34,7 @@ const About = () => {
                 : `2px 2px ${colors.brand.ajBlueLvls["200"]}`
             }
             size="lg"
+            mt={2}
           >
             Welcome!
           </Heading>
