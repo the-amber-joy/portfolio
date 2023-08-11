@@ -19,19 +19,6 @@ const theme = extendTheme({
     heading: `Comfortaa, sans-serif`,
     body: `Comfortaa, sans-serif`,
   },
-  // layerStyles: {
-  // base: {
-  // bg: "gray.50",
-  // border: "2px solid",
-  // borderColor: "gray.500",
-  // color: brand.ajPurpleLvls["200"],
-  // },
-  // selected: {
-  //   bg: "teal.500",
-  //   color: "teal.700",
-  //   borderColor: "orange.500",
-  // },
-  // },
   colors: {
     brand,
     // primaryFontColor: {
@@ -46,12 +33,22 @@ const theme = extendTheme({
   components: {
     Button: {
       baseStyle: {
+        borderRadius: "4px",
         _focus: {
           // Hex codes for transparency https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
           // 99 == 60%
           boxShadow: `0 0 0 3px ${brand.ajPurple}99`,
         },
       },
+    },
+    Link: {
+      baseStyle: (props: StyleFunctionProps) => ({
+        color: mode(brand.ajPurple, brand.ajCheez)(props),
+        borderRadius: "4px",
+        _focus: {
+          boxShadow: `0 0 0 3px ${brand.ajPurple}99`,
+        },
+      }),
     },
     Tabs: {
       baseStyle: (props: StyleFunctionProps) => ({

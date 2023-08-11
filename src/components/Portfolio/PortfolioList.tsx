@@ -53,12 +53,12 @@ const portfolioItems: PortfolioItemType[] = [
 const PortfolioList = () => {
   return (
     <>
-      <Heading size={"sm"} mb={4}>
+      <Heading size={"sm"} my={4}>
         A few silly examples of how I spend some of my spare time:
       </Heading>
-      <Wrap spacing={4}>
-        {map(portfolioItems, (item) => (
-          <PortfolioItem item={item} />
+      <Wrap spacing={4} marginBottom={"76px"}>
+        {map(portfolioItems, (item, i) => (
+          <PortfolioItem item={item} key={i} />
         ))}
       </Wrap>
     </>

@@ -1,12 +1,13 @@
-import { Center, useColorMode } from "@chakra-ui/react";
+import { Center, Link, useColorMode } from "@chakra-ui/react";
 
 import styles from "./Footer.module.css";
+import clsx from "clsx";
 
 const SvgIconLink = (props: any) => {
   const { colorMode } = useColorMode();
 
   return (
-    <a
+    <Link
       href={props.url}
       target="_blank"
       className={
@@ -15,7 +16,12 @@ const SvgIconLink = (props: any) => {
       style={{ padding: "10px" }}
     >
       <Center>
-        <i className={styles.icon}>
+        <i
+          className={clsx(styles.icon, {
+            [styles.iconDark]: colorMode === "dark",
+            [styles.iconLight]: colorMode === "light",
+          })}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -31,7 +37,7 @@ const SvgIconLink = (props: any) => {
         </i>
       </Center>
       {props.title}
-    </a>
+    </Link>
   );
 };
 

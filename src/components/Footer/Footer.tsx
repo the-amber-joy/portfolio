@@ -23,6 +23,7 @@ const Footer = () => {
         alignItems={"flex-end"}
         maxW={"1280px"}
         margin={"auto"}
+        my={1}
       >
         <Flex
           alignItems={"flex-end"}
@@ -36,9 +37,6 @@ const Footer = () => {
         {/* <Spacer /> */}
         <Flex
           justifyContent={"space-around"}
-          className={
-            colorMode === "dark" ? styles.iconLinkDark : styles.iconLinkLight
-          }
         >
           <SvgIconLink title="Github" url="https://github.com/the-amber-joy">
             <title>Github</title>
