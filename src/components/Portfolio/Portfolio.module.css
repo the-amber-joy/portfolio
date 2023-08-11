@@ -3,7 +3,7 @@
 }
 
 .borderDark:hover {
-  border-color: var(--chakra-colors-brand-ajPurple);
+  border-color: var(--chakra-colors-brand-ajPink);
   transition: border-color 0.2s ease-in;
 }
 
