@@ -22,7 +22,7 @@ const About = () => {
       w="auto"
       h="sm"
       marginTop={4}
-      textAlign={"center"}
+      textAlign="center"
       className={styles.gradient}
     >
       <Stack>
@@ -33,12 +33,12 @@ const About = () => {
               ? `2px 2px ${colors.brand.ajPurpleLvls["100"]}`
               : `2px 2px ${colors.brand.ajBlueLvls["200"]}`
           }
-          size={"lg"}
+          size="lg"
         >
           Welcome!
         </Heading>
         <Text
-          maxW={"md"}
+          maxW="md"
           color={
             colorMode === "dark"
               ? colors.brand.ajPurpleLvls["200"]

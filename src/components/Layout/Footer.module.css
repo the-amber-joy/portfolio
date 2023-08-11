@@ -2,6 +2,14 @@
   z-index: 999999 !important;
 }
 
+.footerDark {
+  box-shadow: 0 1px 4px 0 var(--chakra-colors-brand-ajCheezLvls-900);
+}
+
+.footerLight {
+  box-shadow: 0 3px 2px 3px var(--chakra-colors-brand-ajPurpleLvls-500);
+}
+
 .iconLinkDark {
   stroke: var(--chakra-colors-brand-ajCheez);
   color: var(--chakra-colors-brand-ajCheez);

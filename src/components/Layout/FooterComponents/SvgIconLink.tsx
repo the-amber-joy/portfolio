@@ -1,6 +1,6 @@
 import { Center, Link, useColorMode } from "@chakra-ui/react";
 
-import styles from "./Footer.module.css";
+import styles from "../Footer.module.css";
 import clsx from "clsx";
 
 const SvgIconLink = (props: any) => {
@@ -13,7 +13,8 @@ const SvgIconLink = (props: any) => {
       className={
         colorMode === "dark" ? styles.iconLinkDark : styles.iconLinkLight
       }
-      style={{ padding: "10px" }}
+      style={{ padding: "5px 5px 0 5px" }}
+      fontSize={"sm"}
     >
       <Center>
         <i

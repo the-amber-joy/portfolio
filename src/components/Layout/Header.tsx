@@ -1,3 +1,4 @@
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Flex,
   Heading,
@@ -7,11 +8,10 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
-type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;
+type HeaderProps = Omit<IconButtonProps, "aria-label">;
 
-const ColorModeSwitcher = (props: ColorModeSwitcherProps) => {
+const Header = (props: HeaderProps) => {
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
@@ -34,4 +34,4 @@ const ColorModeSwitcher = (props: ColorModeSwitcherProps) => {
   );
 };
 
-export default ColorModeSwitcher;
+export default Header;
