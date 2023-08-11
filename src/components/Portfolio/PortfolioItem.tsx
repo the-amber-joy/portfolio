@@ -25,13 +25,12 @@ const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
         maxW={"sm"}
         w={"auto"}
       >
-        <LinkOverlay href={item.href} isExternal>
+        <LinkOverlay href={item.href}>
           <Image src={item.pic} alt={item.title} />
         </LinkOverlay>
         <Center flexDirection={"column"} p={2}>
           <Text as="b">
             {item.title}
-            <ExternalLinkIcon marginX="2px" marginBottom={1} />
           </Text>
           <Text>{item.description}</Text>
           <Link href={item.repo} marginTop={4} isExternal>
