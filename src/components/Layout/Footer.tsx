@@ -1,11 +1,11 @@
-import { Box, Center, Flex, useColorMode } from "@chakra-ui/react";
+import { Box, Center, useColorMode } from "@chakra-ui/react";
+import clsx from "clsx";
 
 import styles from "./Footer.module.css";
-import clsx from "clsx";
-import Copyright from "./FooterComponents/Copyright";
+import EmailLink from "./FooterComponents/EmailLink";
 import GithubLink from "./FooterComponents/GithubLink";
 import LinkedInLink from "./FooterComponents/LinkedInLink";
-import EmailLink from "./FooterComponents/EmailLink";
+import MastodonLink from "./FooterComponents/MastodonLink";
 import ResumeLink from "./FooterComponents/ResumeLink";
 
 const Footer = () => {
@@ -25,19 +25,17 @@ const Footer = () => {
     >
       <Center
         className="footer-contents"
-        justifyContent="space-between"
+        justifyContent="space-evenly"
         alignItems="flex-end"
         maxW="1280px"
         margin="auto"
         my={1}
       >
-        <Copyright />
-        <Flex justifyContent="space-around">
-          <GithubLink />
-          <LinkedInLink />
-          <EmailLink />
-          <ResumeLink />
-        </Flex>
+        <MastodonLink />
+        <GithubLink />
+        <LinkedInLink />
+        <EmailLink />
+        <ResumeLink />
       </Center>
     </Box>
   );
