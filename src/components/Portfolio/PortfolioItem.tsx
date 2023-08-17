@@ -27,6 +27,7 @@ const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
       borderWidth="1.5px"
       overflow="hidden"
       borderRadius="1rem"
+      shadow={"md"}
     >
       <LinkOverlay href={item.href}>
         <Image src={item.pic} alt={item.title} />
