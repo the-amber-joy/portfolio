@@ -1,0 +1,11 @@
+.headerContainer {
+  z-index: 999999 !important;
+}
+
+.headerDark {
+  box-shadow: 0 -1px 4px 0 var(--chakra-colors-brand-ajCheezLvls-900);
+}
+
+.headerLight {
+  box-shadow: 0 1px 4px -2px var(--chakra-colors-brand-ajPurpleLvls-500);
+}

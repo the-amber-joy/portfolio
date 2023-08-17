@@ -11,7 +11,7 @@
 
 .portfolioItemLight {
   border-color: var(--chakra-colors-brand-ajPurple);
-  color: var(--chakra-colors-brand-ajPurple);
+  color: var(--chakra-colors-brand-ajPurpleLvls-400);
 }
 
 .portfolioItemLight:hover {

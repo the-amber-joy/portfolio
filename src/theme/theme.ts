@@ -1,5 +1,4 @@
 import {
-  // theme as baseTheme,
   extendTheme,
   StyleFunctionProps,
   type ThemeConfig,
@@ -21,14 +20,13 @@ const theme = extendTheme({
   },
   colors: {
     brand,
-    // primaryFontColor: {
-    //   lightMode: brand.ajBlueLvls["200"],
-    //   darkMode: brand.ajPurpleLvls["200"],
-    // },
-    // secondaryFontColor: {
-    //   lightMode: baseTheme.colors.gray["600"],
-    //   darkMode: baseTheme.colors.gray["400"],
-    // },
+  },
+  styles: {
+    global: (props: StyleFunctionProps) => ({
+      body: {
+        bg: mode(brand.ajOrangeLvls["900"], brand.ajBlueLvls["100"])(props),
+      },
+    }),
   },
   components: {
     Button: {

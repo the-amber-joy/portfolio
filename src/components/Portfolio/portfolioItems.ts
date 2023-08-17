@@ -1,12 +1,12 @@
-import { PortfolioItemType } from "./PortfolioList";
 import {
+  catsGPTPng,
+  chatbotPng,
   crittersPng,
   how2fitePng,
-  catsGPTPng,
   shakeMePng,
-  chatbotPng,
   uvIndexPng,
 } from "./img";
+import { PortfolioItemType } from "./PortfolioList";
 
 const portfolioItems: PortfolioItemType[] = [
   {

@@ -34,7 +34,11 @@ const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
       <Center flexDirection={"column"} p={2}>
         <Text
           as="b"
-          color={colors.brand.ajPinkLvls["600"]}
+          color={
+            colorMode === "dark"
+              ? colors.brand.ajPink
+              : colors.brand.ajMagentaLvls["400"]
+          }
           className={
             colorMode === "dark"
               ? styles.portfolioItemDark
