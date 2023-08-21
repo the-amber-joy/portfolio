@@ -25,7 +25,7 @@ const About = () => {
         textAlign="center"
         className={styles.gradient}
         borderRadius="1rem"
-        shadow={"md"}
+        shadow={"lg"}
       >
         <Stack>
           <Heading
