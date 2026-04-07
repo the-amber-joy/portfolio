@@ -1,10 +1,11 @@
 import {
-  catsGPTPng,
   chatbotPng,
   crittersPng,
   farklePng,
+  homeChatPng,
   how2fitePng,
   shakeMePng,
+  tarotPng,
   uvIndexPng,
 } from './img';
 import { PortfolioItemType } from './PortfolioList';
@@ -17,6 +18,22 @@ const portfolioItems: PortfolioItemType[] = [
       'A scorekeeping app for the dice game Farkle. Dice not included.',
     href: 'https://farkle.amberjoy.dev',
     repo: 'https://github.com/the-amber-joy/farkle',
+  },
+  {pic: homeChatPng,
+    title: 'Home Chat',
+    description:
+      'A simple local-use-only chat interface I built while learning about Web Sockets. Not hosted publicly, only runs locally.',
+    href: '',
+    repo: 'https://github.com/the-amber-joy/home-chat',
+
+  },
+  {
+    pic: tarotPng,
+    title: "Tarot Tracker",
+    description:
+      'App for tracking tarot readings & interpretations, and tracking card stats. Deck not included.',
+    href: 'https://tarot.amberjoy.dev',
+    repo: 'https://github.com/the-amber-joy/tarot-tracker',
   },
   {
     pic: crittersPng,
@@ -46,16 +63,16 @@ const portfolioItems: PortfolioItemType[] = [
       'https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API',
     extraText: 'Web Speech API',
   },
-  {
-    pic: catsGPTPng,
-    title: 'CatsGPT',
-    description:
-      'I asked ChatGPT to make a tiny ExpressJS app, and then style it. This is the result. Design is hard for LLMs. (Hosted on Glitch, so it may be a little slow to load.)',
-    href: 'https://catsGPT.amberjoy.dev',
-    repo: 'https://github.com/the-amber-joy/catsGPT',
-    extraLink: 'https://sharegpt.com/c/wHYqysu',
-    extraText: 'My original convo w/ ChatGPT',
-  },
+  // {
+  //   pic: catsGPTPng,
+  //   title: 'CatsGPT',
+  //   description:
+  //     'I asked ChatGPT to make a tiny ExpressJS app, and then style it. This is the result. Design is hard for LLMs. (Hosted on Glitch, so it may be a little slow to load.)',
+  //   href: 'https://catsGPT.amberjoy.dev',
+  //   repo: 'https://github.com/the-amber-joy/catsGPT',
+  //   extraLink: 'https://sharegpt.com/c/wHYqysu',
+  //   extraText: 'My original convo w/ ChatGPT',
+  // },
   {
     pic: shakeMePng,
     title: 'SHAKE ME',
