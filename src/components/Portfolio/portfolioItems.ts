@@ -20,7 +20,7 @@ const portfolioItems: PortfolioItemType[] = [
   },
   {
     pic: uvIndexPng,
-    title: "Today's UV Undex",
+    title: "Today's UV Index",
     description:
       "I built this during the technical portion of a job interview. I was given 90 minutes and was allowed to use an existing app (my Pokemon critters) as boilerplate. Initially built with hard-coded coordinates, and later I added location search just for fun. (My free API key only allows 50 requests per day so this may not always work!)",
     href: "https://uvindex.amberjoy.dev",
