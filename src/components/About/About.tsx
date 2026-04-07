@@ -6,9 +6,9 @@ import {
   Text,
   useColorMode,
   useTheme,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import styles from "./About.module.css";
+import styles from './About.module.css';
 
 const About = () => {
   const { colorMode } = useColorMode();
@@ -25,15 +25,15 @@ const About = () => {
         textAlign="center"
         className={styles.gradient}
         borderRadius="1rem"
-        shadow={"lg"}
+        shadow="lg"
       >
         <Stack>
           <Heading
             color={colors.white}
             textShadow={
-              colorMode === "dark"
-                ? `2px 2px ${colors.brand.ajPurpleLvls["100"]}`
-                : `2px 2px ${colors.brand.ajBlueLvls["200"]}`
+              colorMode === 'dark'
+                ? `2px 2px ${colors.brand.ajPurpleLvls['100']}`
+                : `2px 2px ${colors.brand.ajBlueLvls['200']}`
             }
             size="lg"
             mt={2}
@@ -43,9 +43,9 @@ const About = () => {
           <Text
             maxW="md"
             color={
-              colorMode === "dark"
-                ? colors.brand.ajPurpleLvls["200"]
-                : colors.brand.ajBlueLvls["200"]
+              colorMode === 'dark'
+                ? colors.brand.ajPurpleLvls['200']
+                : colors.brand.ajBlueLvls['200']
             }
             padding={2}
             fontSize="xl"

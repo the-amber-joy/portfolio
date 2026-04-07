@@ -1,4 +1,4 @@
-import SvgIconLink from "./SvgIconLink";
+import SvgIconLink from './SvgIconLink';
 
 export default function LinkedInLink() {
   return (

@@ -6,7 +6,9 @@
 .portfolioItemDark:hover {
   border-color: var(--chakra-colors-brand-ajPink);
   color: var(--chakra-colors-brand-ajPink);
-  transition: border-color 0.2s ease-in, color 0.2s ease-in;
+  transition:
+    border-color 0.2s ease-in,
+    color 0.2s ease-in;
 }
 
 .portfolioItemLight {
@@ -17,5 +19,7 @@
 .portfolioItemLight:hover {
   border-color: var(--chakra-colors-brand-ajMagenta);
   color: var(--chakra-colors-brand-ajMagentaLvls-400);
-  transition: border-color 0.2s ease-in, color 0.2s ease-in;
+  transition:
+    border-color 0.2s ease-in,
+    color 0.2s ease-in;
 }

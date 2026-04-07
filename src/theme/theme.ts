@@ -2,13 +2,13 @@ import {
   extendTheme,
   StyleFunctionProps,
   type ThemeConfig,
-} from "@chakra-ui/react";
-import { mode } from "@chakra-ui/theme-tools";
+} from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
-import brand from "./brandColors";
+import brand from './brandColors';
 
 const config: ThemeConfig = {
-  initialColorMode: "system",
+  initialColorMode: 'system',
   useSystemColorMode: false,
 };
 
@@ -24,14 +24,14 @@ const theme = extendTheme({
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
-        bg: mode(brand.ajOrangeLvls["900"], brand.ajBlueLvls["100"])(props),
+        bg: mode(brand.ajOrangeLvls['900'], brand.ajBlueLvls['100'])(props),
       },
     }),
   },
   components: {
     Button: {
       baseStyle: {
-        borderRadius: ".25rem",
+        borderRadius: '.25rem',
         _focus: {
           // Hex codes for transparency https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
           // 99 == 60%
@@ -42,7 +42,7 @@ const theme = extendTheme({
     Link: {
       baseStyle: (props: StyleFunctionProps) => ({
         color: mode(brand.ajPurple, brand.ajCheez)(props),
-        borderRadius: ".25rem",
+        borderRadius: '.25rem',
         _focus: {
           boxShadow: `0 0 0 3px ${brand.ajPurple}99`,
         },

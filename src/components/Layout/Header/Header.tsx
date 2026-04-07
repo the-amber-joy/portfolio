@@ -1,4 +1,4 @@
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
   Box,
   Center,
@@ -8,19 +8,19 @@ import {
   useColorMode,
   useColorModeValue,
   useTheme,
-} from "@chakra-ui/react";
-import clsx from "clsx";
+} from '@chakra-ui/react';
+import clsx from 'clsx';
 
-import styles from "./Header.module.css";
+import styles from './Header.module.css';
 
-type HeaderProps = Omit<IconButtonProps, "aria-label">;
+type HeaderProps = Omit<IconButtonProps, 'aria-label'>;
 
 const Header = (props: HeaderProps) => {
   const { colorMode } = useColorMode();
   const { colors } = useTheme();
 
   const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue("dark", "light");
+  const text = useColorModeValue('dark', 'light');
   const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
 
   return (
@@ -30,13 +30,13 @@ const Header = (props: HeaderProps) => {
       w="100%"
       px={4}
       bgColor={
-        colorMode === "dark"
-          ? colors.brand.ajBlueLvls["100"]
-          : colors.brand.ajOrangeLvls["900"]
+        colorMode === 'dark'
+          ? colors.brand.ajBlueLvls['100']
+          : colors.brand.ajOrangeLvls['900']
       }
       className={clsx(styles.headerContainer, {
-        [styles.headerDark]: colorMode === "dark",
-        [styles.headerLight]: colorMode === "light",
+        [styles.headerDark]: colorMode === 'dark',
+        [styles.headerLight]: colorMode === 'light',
       })}
     >
       <Center

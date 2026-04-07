@@ -1,12 +1,12 @@
-import { Box, Center, useColorMode, useTheme } from "@chakra-ui/react";
-import clsx from "clsx";
+import { Box, Center, useColorMode, useTheme } from '@chakra-ui/react';
+import clsx from 'clsx';
 
-import EmailLink from "./components/EmailLink";
-import GithubLink from "./components/GithubLink";
-import LinkedInLink from "./components/LinkedInLink";
-import MastodonLink from "./components/MastodonLink";
-import ResumeLink from "./components/ResumeLink";
-import styles from "./Footer.module.css";
+import EmailLink from './components/EmailLink';
+import GithubLink from './components/GithubLink';
+import LinkedInLink from './components/LinkedInLink';
+import MastodonLink from './components/MastodonLink';
+import ResumeLink from './components/ResumeLink';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   const { colorMode } = useColorMode();
@@ -18,14 +18,14 @@ const Footer = () => {
       bottom="0px"
       w="100%"
       bgColor={
-        colorMode === "dark"
-          ? colors.brand.ajBlueLvls["100"]
-          : colors.brand.ajOrangeLvls["900"]
+        colorMode === 'dark'
+          ? colors.brand.ajBlueLvls['100']
+          : colors.brand.ajOrangeLvls['900']
       }
       px={4}
       className={clsx(styles.footerContainer, {
-        [styles.footerDark]: colorMode === "dark",
-        [styles.footerLight]: colorMode === "light",
+        [styles.footerDark]: colorMode === 'dark',
+        [styles.footerLight]: colorMode === 'light',
       })}
     >
       <Center

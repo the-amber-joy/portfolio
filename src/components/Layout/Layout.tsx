@@ -1,8 +1,8 @@
-import { Container, Flex } from "@chakra-ui/react";
-import About from "../About/About";
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
-import PortfolioList from "../Portfolio/PortfolioList";
+import { Container, Flex } from '@chakra-ui/react';
+import About from '../About/About';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
+import PortfolioList from '../Portfolio/PortfolioList';
 
 const Layout = () => (
   <>
