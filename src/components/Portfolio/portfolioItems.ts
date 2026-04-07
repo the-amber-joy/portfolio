@@ -19,11 +19,11 @@ const portfolioItems: PortfolioItemType[] = [
     href: 'https://farkle.amberjoy.dev',
     repo: 'https://github.com/the-amber-joy/farkle',
   },
-  {pic: homeChatPng,
+  {
+    pic: homeChatPng,
     title: 'Home Chat',
     description:
       'A simple local-use-only chat interface I built while learning about Web Sockets. Not hosted publicly, only runs locally.',
-    href: '',
     repo: 'https://github.com/the-amber-joy/home-chat',
 
   },

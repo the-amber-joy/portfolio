@@ -29,9 +29,13 @@ const PortolioItem = ({ item }: { item: PortfolioItemType }) => {
       borderRadius="1rem"
       shadow="md"
     >
-      <LinkOverlay href={item.href}>
+      {item.href ? (
+        <LinkOverlay href={item.href}>
+          <Image src={item.pic} alt={item.title} />
+        </LinkOverlay>
+      ) : (
         <Image src={item.pic} alt={item.title} />
-      </LinkOverlay>
+      )}
       <Center flexDirection="column" p={2}>
         <Text
           as="b"
