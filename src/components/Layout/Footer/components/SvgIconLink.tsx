@@ -3,12 +3,31 @@ import { Center, Link, useColorMode } from '@chakra-ui/react';
 import clsx from 'clsx';
 import styles from '../Footer.module.css';
 
-const SvgIconLink = (props: any) => {
+type SvgIconLinkProps = {
+  url: string;
+  title: string;
+  children: React.ReactNode;
+  filled?: boolean;
+  strokeWidth?: number;
+  viewBox?: string;
+  preserveAspectRatio?: string;
+};
+
+const SvgIconLink = (props: SvgIconLinkProps) => {
   const { colorMode } = useColorMode();
+  const {
+    url,
+    title,
+    children,
+    filled = false,
+    strokeWidth = 2,
+    viewBox = '0 0 24 24',
+    preserveAspectRatio = 'xMidYMid meet',
+  } = props;
 
   return (
     <Link
-      href={props.url}
+      href={url}
       target="_blank"
       className={
         colorMode === 'dark' ? styles.iconLinkDark : styles.iconLinkLight
@@ -26,19 +45,20 @@ const SvgIconLink = (props: any) => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            preserveAspectRatio="none"
+            viewBox={viewBox}
+            fill={filled ? 'currentColor' : 'none'}
+            stroke={filled ? 'none' : 'currentColor'}
+            strokeWidth={filled ? undefined : strokeWidth}
+            strokeLinecap={filled ? undefined : 'round'}
+            strokeLinejoin={filled ? undefined : 'round'}
+            preserveAspectRatio={preserveAspectRatio}
             className={styles.iconSvg}
           >
-            {props.children}
+            {children}
           </svg>
         </i>
       </Center>
-      {props.title}
+      {title}
     </Link>
   );
 };

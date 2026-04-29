@@ -1,10 +1,12 @@
 import { Box, Center, useColorMode, useTheme } from '@chakra-ui/react';
 import clsx from 'clsx';
 
+import BlueskyLink from './components/BlueskyLink';
 import EmailLink from './components/EmailLink';
 import GithubLink from './components/GithubLink';
 import LinkedInLink from './components/LinkedInLink';
 import MastodonLink from './components/MastodonLink';
+import RavelryLink from './components/RavelryLink';
 import ResumeLink from './components/ResumeLink';
 import styles from './Footer.module.css';
 
@@ -30,17 +32,22 @@ const Footer = () => {
     >
       <Center
         className="footer-contents"
-        justifyContent="space-evenly"
+        justifyContent={{ base: 'center', md: 'space-evenly' }}
+        flexWrap={{ base: 'wrap', md: 'nowrap' }}
+        columnGap={{ base: 3, md: 0 }}
+        rowGap={{ base: 1, md: 0 }}
         alignItems="flex-end"
         maxW="1280px"
         margin="auto"
         my={1}
       >
+        <RavelryLink />
+        <BlueskyLink />
         <MastodonLink />
         <GithubLink />
         <LinkedInLink />
-        <EmailLink />
         <ResumeLink />
+        <EmailLink />
       </Center>
     </Box>
   );
