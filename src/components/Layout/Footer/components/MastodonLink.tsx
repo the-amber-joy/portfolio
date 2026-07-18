@@ -1,6 +1,6 @@
 import SvgIconLink from './SvgIconLink';
 
-export default function LinkedInLink() {
+export default function MastodonLink() {
   return (
     <SvgIconLink title="Mastodon" url="https://mstdn.social/@amberjoy">
       <title>Mastodon</title>
