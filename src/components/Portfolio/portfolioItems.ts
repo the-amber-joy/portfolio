@@ -7,6 +7,7 @@ import {
   shakeMePng,
   tarotPng,
   uvIndexPng,
+  weatherPng
 } from './img';
 import { PortfolioItemType } from './PortfolioList';
 
