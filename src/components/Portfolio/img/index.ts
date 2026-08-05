@@ -7,6 +7,7 @@ import how2fitePng from './how2fite.png';
 import shakeMePng from './shakeMe.png';
 import tarotPng from './tarot.png';
 import uvIndexPng from './uvIndex.png';
+import weatherPng from './weather.png';
 
 export {
   catsGPTPng,
@@ -18,4 +19,5 @@ export {
   shakeMePng,
   tarotPng,
   uvIndexPng,
+  weatherPng
 };

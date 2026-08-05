@@ -12,6 +12,14 @@ import { PortfolioItemType } from './PortfolioList';
 
 const portfolioItems: PortfolioItemType[] = [
   {
+    pic: weatherPng,
+    title: "Lookit This Weather",
+    description:
+      'Just the parts of the weather I care about. Themes and Modes, too.',
+    href: 'https://weather.amberjoy.dev',
+    repo: 'https://github.com/the-amber-joy/lookit-this-weather',
+  },
+  {
     pic: farklePng,
     title: "Let's Farkle!",
     description:
